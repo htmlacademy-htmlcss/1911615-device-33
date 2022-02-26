@@ -88,7 +88,8 @@ body {
 .product-list,
 .catalog-pagination,
 .footer-social-list,
-.slider-pagination{
+.slider-pagination,
+.contacts-schedule{
   List-style: none;
 }
 
@@ -389,7 +390,7 @@ body {
   width: 1160px;
   min-height: 560px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 57px;
 }
 
 .slider-wrapper{
@@ -459,7 +460,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:210px;
+  width:220px;
   min-height:40px;
   margin-bottom: 49px;
 
@@ -537,8 +538,6 @@ body {
   background-color: #ffffff;
   border: 2px solid #000000;
   border-radius: 50%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -549,13 +548,17 @@ body {
 .slider-goods-features{
   display: flex;
   min-height: 72px;
+  margin: 0;
 }
 
 .feature-block{
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-between;
   min-width: 140px;
+  margin: 0;
   margin-right: 20px;
+  padding: 0;
 }
 
 .feature-block:last-child{
@@ -597,8 +600,8 @@ body {
  padding:0;
 }
 
-.categories-list li{
-  margin: 0 auto;
+.categories-link:active{
+  opacity: 0.3;
 }
 
 .categories-link{
@@ -629,6 +632,8 @@ body {
   background-color: #ffe17f;
 }
 
+
+/* Блок преимуществ */
 .advantages{
   width:100%;
   min-height:391px;
@@ -639,6 +644,7 @@ body {
 
 .advantages-container{
   display: flex;
+  align-items: flex-start;
   width:1160px;
   min-height: 391px;
   margin: 0 auto;
@@ -650,7 +656,7 @@ body {
   align-items: flex-end;
   box-sizing: border-box;
   width: 287px;
-  min-height: 391px;
+  min-height: 319px;
   margin: 0;
   padding-top: 64px;
   padding-left: 0;
@@ -658,18 +664,23 @@ body {
   border-right: 7px solid #000000;
 }
 
-.advantages-item{
-  width:160px;
-  min-height:20px;
-  margin-bottom: 35px;
-  padding: 9px 120px 11px 0;
+.advantages-item-current{
+  color:#ffe17f;
+
+  background: #000000;
 }
 
-.advantages-item:nth-child(3){
-  margin-bottom: 0;
+.advantages-item + .advantages-item{
+  margin-top: 35px;
 }
 
 .advantages-link{
+  display: flex;
+  align-items: center;
+  width:160px;
+  min-height:40px;
+  padding-right: 120px;
+
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   font-weight: 800;
@@ -680,21 +691,47 @@ body {
   letter-spacing: 0.2em;
 }
 
-.advantages-item-current{
-  color:#ffe17f;
+.advantages-link-definition{
+  display: block;
+  width: 160px;
 
-  background-color: #000000;
+  background: linear-gradient(to bottom, #ffffff00 0px, #ffffff00 6px, #ffe17f 6px, #ffe17f 15px, #ffffff00 15px, #ffffff00 21px) 160px;
 }
 
-.advantage-wrapper{
+.advantages-item-current .advantages-link-definition{
+  background: #000000;
+}
+
+.advantage-features{
+  margin: 0;
+  padding: 0;
+}
+
+.advantage-features-item{
   display: flex;
   width: 750px;
   min-height: 200px;
+  margin: 0;
   margin-top: 72.5px;
-  margin-left: 112px;
+  margin-left: 116px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.advantage-features-hidden{
+  display: none;
+}
+
+.advantage-feature{
+  width: 475px;
+  margin: 0;
+  margin-right: 83px;
 }
 
 .advantage-feature-title{
+  margin-bottom: 34px;
+
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -702,9 +739,16 @@ body {
 }
 
 .advantage-feature-definition{
+  margin: 0;
+
+  font-family: Rubik;
+  font-size: 18px;
   line-height: 30px;
+  font-weight: 400;
   color: #444444;
 }
+
+/* Блок доставки редких вещей */
 
 .rare-goods-delivery{
   width:1160px;
@@ -737,6 +781,12 @@ body {
   background-color:#ffe17f ;
 }
 
+.rare-goods-link p{
+  margin: 0;
+  padding: 0;
+  padding-top: 2px;
+}
+
 .rare-goods-info-wrapper{
   margin: 0 42.5px;
   padding: 14px 19.5px 14px 18.5px;
@@ -762,7 +812,7 @@ body {
 .about-us{
   display: flex;
   flex-direction: column;
-  width: 520px;
+  width: 500px;
   min-height: 493px;
 }
 
@@ -808,6 +858,10 @@ body {
 
 .about-us-title,
 .contacts-title{
+  margin: 0;
+  margin-top: 47px;
+  margin-bottom: 48px;
+
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -815,14 +869,43 @@ body {
   color: #000000;
 }
 
+.about-us p{
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .transport-companies-list{
+  margin: 0;
+  padding: 0;
+
   line-height: 20px;
   font-weight: 700;
   color:#000000;
+  list-style: none;
+  letter-spacing: -0.02em;
 }
 
-.transport-companies-list li::marker{
-  color:#ffe17f;
+.transport-company-item::before{
+  content: "";
+
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 8px 26px 8px 0;
+
+  background-color: #ffe17f;
+  border-radius: 50%;
+}
+
+.transport-company-item{
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding-left: 3.5px;
+}
+
+.transport-company-item + .transport-company-item{
+  margin-top: 19px;
 }
 
 .about-us-link{
@@ -831,6 +914,7 @@ body {
   align-items: center;
   width: 270px;
   min-height: 40px;
+  margin-top: 30px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -861,15 +945,32 @@ body {
   background: linear-gradient(to bottom, #ffffff 0px, #ffffff 16px, #ffe17f 16px, #ffe17f 24px, #ffffff 24px, #ffffff 40px);
 }
 
+.contacts p{
+  margin: 0;
+}
+
 .contacts-subtitle{
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
 
 .contacts-phone{
+  margin: 0;
+
   color: inherit;
 }
+
+.contacts-schedule{
+margin: 0;
+margin-bottom: 30px;
+padding: 0;
+}
+
 
 .newsletter-container{
   width: 100%;
@@ -979,17 +1080,7 @@ body {
   margin-left: auto;
 }
 
-
-
-
-
 /* Начало футера */
-
-
-
-
-
-
 .page-footer{
   color: #ffffff;
 
@@ -1013,17 +1104,6 @@ body {
   grid-template-rows: 98px min-content auto;
   justify-items:center;
 }
-
-/* .footer-logo-container{
-  grid-area: footer-logo;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 239px;
-  min-height: 182px;
-  margin-top: 62px;
-} */
 
 .footer-logo-link{
   grid-area: footer-logo;
@@ -1064,11 +1144,9 @@ body {
   margin-left: 17.5px;
 }
 
-
 .footer-social{
   margin-top:49px;
 }
-
 
 .footer-social-list{
   grid-area: footer-social;
@@ -1107,13 +1185,13 @@ body {
   background:no-repeat center url(../images/icons/icon-twitter.svg);
 }
 
-.academy-button{;
+.academy-button{
   display:block;
   width:115px;
   height:33px;
   margin-top: 52px;
 
-  background:no-repeat center url(../images/logo-html-academy.svg);
+  fill: #FFC700;
   grid-area: footer-academy;
   justify-self: end;
 }
@@ -1132,19 +1210,7 @@ body {
 }
 
 
-
-
-
-
-
 /* Конец футера */
-
-
-
-
-
-
-
 
 .catalog-header{
   position:relative;

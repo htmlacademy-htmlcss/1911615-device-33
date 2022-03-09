@@ -17,26 +17,24 @@
         <h2 class="visually-hidden">Пользовательское меню</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="search-wrapper">
-            <label class="search-form-label" for="search-request">
-              <img class="search-form-icon" src="images/icons/icon-search.svg" width="16" height="16" alt="">
-            </label>
+            <label class="search-form-label" for="search-request"></label>
             <input type="search" class="search-input" name="search-request" id="search-request" placeholder="Поиск по сайту" >
           </div>
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item navigation-user-item header-login">
-            <a class="navigation-link login-link" href="">
-              <img class="navigation-link-icon icon-login" src="images/icons/icon-login.svg" width="13" height="12" alt="">
-              <span class="new-user login-current">Войти</span>
-              <span class="current-user login-hidden">Коля Петухов</span>
-              <span class="current-user-logoff login-hidden">Выйти</span>
+            <a class="navigation-link login-link new-user login-show" href="">
+              <span class="navigation-link-description">Войти</span>
             </a>
+            <a class="navigation-link login-link current-user" href="">
+              <span class="navigation-link-description">Коля Петухов</span>
+            </a>
+            <a class="navigation-link current-user current-user-logoff" href="">Выйти</a>
           </li>
           <li class="navigation-item navigation-user-item header-compare">
             <a class="navigation-link" href="">
-              <img class="navigation-link-icon icon-compare" src="images/icons/icon-compare.svg" width="10" height="12" alt="">
-              <span>Сравнить</span>
+              <span class="navigation-link-description compare-description">Сравнить</span>
             </a>
           </li>
           <li class="navigation-item navigation-user-item header-basket">
@@ -44,11 +42,11 @@
               <div class="basket-status-container">
                 <span class="basket-status">2</span>
               </div>
-              <img class="navigation-link-icon icon-cart" src="images/icons/icon-cart.svg" width="16" height="14" alt="">
-              <span>Корзина</span>
+              <span class="navigation-link-description basket-description">Корзина</span>
             </a>
-            <div class="popover-cart-container cart-popover-close">
+            <div class="popover-cart-container">
               <section class="cart-order">
+                <h2 class="visually-hidden">Корзина</h2>
                 <ol class="cart-order-list">
                   <li class="cart-order-item">
                     <a class="cart-item-link" href="">
@@ -94,7 +92,7 @@
         <section class="catalog-toggler">
           <h2 class="visually-hidden">Категории каталога подменю</h2>
           <a class="catalog-toggle-link" href="catalog.html">
-            <span>Каталог товаров</span>
+            <span class="catalog-toggle-menu">Каталог товаров</span>
             <span class="catalog-toggle-button"></span>
           </a>
           <ul class="catalog-list">
@@ -137,7 +135,7 @@
       <section class="goods-slider">
         <h2 class="gallery-title visually-hidden">Популярные товары</h2>
         <ol class="goods-slider-list">
-          <li class="goods-slider-item">
+          <li class="goods-slider-item item-current">
             <span class="slider-number">01</span>
             <img class="slider-image" src="images/slider/slider-1.png" width="560" height="560" alt="Изображение квадрокоптера с лазером" >
             <section class="goods-slider-info">
@@ -156,7 +154,7 @@
               </dl>
             </section>
           </li>
-          <li class="goods-slider-item item-hidden">
+          <li class="goods-slider-item">
             <span class="slider-number">02</span>
             <img class="slider-image" src="images/slider/slider-2.png" width="560" height="560" alt="Изображение смарт-браслета" >
             <section class="goods-slider-info">
@@ -171,7 +169,7 @@
               </dl>
             </section>
           </li>
-          <li class="goods-slider-item item-hidden">
+          <li class="goods-slider-item">
             <span class="slider-number">03</span>
             <img class="slider-image" src="images/slider/slider-3.png"  width="560" height="560" alt="Изображение селфи-палок" >
             <section class="goods-slider-info">
@@ -282,26 +280,26 @@
             </li>
           </ul>
             <ul class="advantage-features">
-                <li class="advantage-features-item">
+                <li class="advantage-features-item advantage-features-current">
                   <dl class="advantage-feature">
                   <dt class="advantage-feature-title advantage-feature-title-current">Доставка</dt>
                   <dd class="advantage-feature-definition advantage-feature-definition-current">Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно! Ведь <br>мы неплохо заработаем, поднимая его на ваш этаж.</dd>
                   </dl>
                   <img class="advantage-icon" src="images/advantage-delivery-boy.svg" width="136" height="164" alt="">
                 </li>
-                <li class="advantage-features-item advantage-features-hidden">
+                <li class="advantage-features-item">
                   <dl class="advantage-feature">
-                    <dt class="advantage-feature-title visually-hidden">Гарантия</dt>
-                    <dd class="advantage-feature-definition visually-hidden">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</dd>
+                    <dt class="advantage-feature-title">Гарантия</dt>
+                    <dd class="advantage-feature-definition">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</dd>
                   </dl>
                   <img class="advantage-icon" src="images/advantage-service.svg" width="171" height="195" alt="">
                 </li>
-                <li class="advantage-features-item advantage-features-hidden">
+                <li class="advantage-features-item">
                   <dl class="advantage-feature">
-                    <dt class="advantage-feature-title visually-hidden">Кредит</dt>
-                    <dd class="advantage-feature-definition visually-hidden">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</dd>
+                    <dt class="advantage-feature-title">Кредит</dt>
+                    <dd class="advantage-feature-definition">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</dd>
                   </dl>
-                  <img class="advantage-icon visually-hidden" src="images/advantage-credit-boy.svg" width="156" height="188" alt="">
+                  <img class="advantage-icon" src="images/advantage-credit-boy.svg" width="156" height="188" alt="">
                 </li>
             </ul>
         </div>
@@ -336,7 +334,7 @@
         </section>
         <section class="contacts">
           <h2 class="contacts-title">Контакты</h2>
-          <p class="contacts-pickup-info">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
+          <p class="contacts-pickup-info">Вы можете забрать товар сами, заехав в наш офис.<br> Заодно сможете проверить работоспособность покупки.</p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
           <p class="contacts-adress">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
@@ -355,9 +353,8 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="subscribe-button" type="submit">Подписаться</button>
-            <img class="subscription-icon" src="images/icons/icon-big-tick.svg" width="14" height="14" alt="">
-            <p class="subscription-free">Это бесплатно</p>
           </form>
+          <p class="subscription-free">Это бесплатно</p>
         </section>
       </div>
     </main>
@@ -412,20 +409,20 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="modal-container modal-hidden">
-      <div class="rare-goods-modal modal-hidden">
+    <div class="modal-container">
+      <div class="rare-goods-modal">
           <form class="rare-order-form" action="https://echo.htmlacademy.ru/" method="post">
             <h2 class="goods-modal-title">Доставка под заказ</h2>
             <button type="button" class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
             </button>
             <div class="field-group rare-order-form-name">
-              <label class="rare-form-label" for="rare-order-name">Ваше имя:</label>
+              <label class="rare-form-label name-label" for="rare-order-name">Ваше имя:</label>
               <input class="order-field" type="text" id="rare-order-name" name="rare-order-name" placeholder="Введите имя" required>
               <span class="rare-order-help help-name">Добавьте имя</span>
             </div>
             <div class="field-group rare-order-form-mail">
-              <label class="rare-form-label" for="rare-order-mail">Ваш e-mail:</label>
+              <label class="rare-form-label mail-label" for="rare-order-mail">Ваш e-mail:</label>
               <input class="order-field" type="email" id="rare-order-mail" name="rare-order-mail" placeholder="Введите e-mail" required>
               <span class="rare-order-help help-mail">Забавный у вас адрес</span>
             </div>
@@ -435,9 +432,8 @@
             </div>
             <div class="order-quanity-container">
               <div class="order-quanity-info">
-                <label class="rare-form-label" for="quanity-number">Количество</label>
+                <label class="rare-form-label" for="quanity-number">Количество:</label>
                 <p tabindex="0" class="quanity-info-wrapper">
-                  <img class="quanity-info-icon" src="images/icons/icon-info.svg" width="2" height="12" alt="">
                   <span class="order-tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
                     к провозу багажа.</span>
                 </p>

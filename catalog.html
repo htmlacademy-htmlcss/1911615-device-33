@@ -17,26 +17,24 @@
         <h2 class="visually-hidden">Пользовательское меню</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="search-wrapper">
-            <label class="search-form-label" for="search-request">
-              <img class="search-form-icon" src="images/icons/icon-search.svg" width="16" height="16" alt="">
-            </label>
+            <label class="search-form-label" for="search-request"></label>
             <input type="search" class="search-input" name="search-request" id="search-request" placeholder="Поиск по сайту" >
           </div>
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item navigation-user-item header-login">
-            <a class="navigation-link login-link" href="">
-              <img class="navigation-link-icon icon-login" src="images/icons/icon-login.svg" width="13" height="12" alt="">
-              <span class="new-user login-current">Войти</span>
-              <span class="current-user login-hidden">Коля Петухов</span>
-              <span class="current-user-logoff login-hidden">Выйти</span>
+            <a class="navigation-link login-link new-user login-show" href="">
+              <span class="navigation-link-description">Войти</span>
             </a>
+            <a class="navigation-link login-link current-user" href="">
+              <span class="navigation-link-description">Коля Петухов</span>
+            </a>
+            <a class="navigation-link current-user current-user-logoff" href="">Выйти</a>
           </li>
           <li class="navigation-item navigation-user-item header-compare">
             <a class="navigation-link" href="">
-              <img class="navigation-link-icon icon-compare" src="images/icons/icon-compare.svg" width="10" height="12" alt="">
-              <span>Сравнить</span>
+              <span class="navigation-link-description compare-description">Сравнить</span>
             </a>
           </li>
           <li class="navigation-item navigation-user-item header-basket">
@@ -44,11 +42,11 @@
               <div class="basket-status-container">
                 <span class="basket-status">2</span>
               </div>
-              <img class="navigation-link-icon icon-cart" src="images/icons/icon-cart.svg" width="16" height="14" alt="">
-              <span>Корзина</span>
+              <span class="navigation-link-description basket-description">Корзина</span>
             </a>
-            <div class="popover-cart-container cart-popover-close">
+            <div class="popover-cart-container">
               <section class="cart-order">
+                <h2 class="visually-hidden">Корзина</h2>
                 <ol class="cart-order-list">
                   <li class="cart-order-item">
                     <a class="cart-item-link" href="">
@@ -94,7 +92,7 @@
         <section class="catalog-toggler">
           <h2 class="visually-hidden">Категории каталога подменю</h2>
           <a class="catalog-toggle-link" href="catalog.html">
-            <span>Каталог товаров</span>
+            <span class="catalog-toggle-menu">Каталог товаров</span>
             <span class="catalog-toggle-button"></span>
           </a>
           <ul class="catalog-list">
@@ -184,35 +182,35 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" name="color-filter" checked>
+                    <input class="control-input visually-hidden" type="checkbox" value="black" name="color-filter" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Черный</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" name="color-filter" checked>
+                    <input class="control-input visually-hidden" type="checkbox" value="white" name="color-filter" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Белый</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" name="color-filter">
+                    <input class="control-input visually-hidden" type="checkbox" value="blue" name="color-filter">
                     <span class="control-mark"></span>
                     <span class="control-label">Синий</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" name="color-filter">
+                    <input class="control-input visually-hidden" type="checkbox" value="red" name="color-filter">
                     <span class="control-mark"></span>
                     <span class="control-label">Красный</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" name="color-filter">
+                    <input class="control-input visually-hidden" type="checkbox" value="pink" name="color-filter">
                     <span class="control-mark"></span>
                     <span class="control-label">Розовый</span>
                   </label>
@@ -252,12 +250,10 @@
             </select>
             <div class="button-sort-container">
               <a href="#" class="button-sort button-sort-increase">
-                <img src="images/icons/icon-arrow-sort-up.svg" width="10" height="10" alt="">
                 <span class="visually-hidden">По возрастанию</span>
               </a>
               <a class="button-sort button-sort-decrease" href="#">
-                <img src="images/icons/icon-arrow-sort-down.svg" width="10" height="10" alt="">
-                <span class="visually-hidden">По убыванию</span>
+                <span class="visually-hidden sort-down">По убыванию</span>
               </a>
             </div>
           </div>
@@ -275,7 +271,7 @@
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/catalog/product-2.jpg" width="360" height="380" alt="">
                 <h3 class="product-card-title product-card-pro">Профессиональная<br> селфи-палка</h3>
-                <p class="product-card-price">1500 ₽</p>
+                <p class="product-card-price">1 500 ₽</p>
                 <span class="product-mask"> </span>
                 <div class="learn-more-button"><span class="learn-more">Подробнее</span></div>
               </a>
@@ -284,7 +280,7 @@
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/catalog/product-3.jpg" width="360" height="380" alt="">
                 <h3 class="product-card-title product-card-water-res">Непотопляемая<br> селфи-палка</h3>
-                <p class="product-card-price">2500 ₽</p>
+                <p class="product-card-price">2 500 ₽</p>
                 <span class="product-mask"> </span>
                 <div class="learn-more-button"><span class="learn-more">Подробнее</span></div>
               </a>
@@ -293,7 +289,7 @@
               <a class="product-card-link product-new" href="#">
                 <img class="product-card-image" src="images/catalog/product-4.jpg" width="360" height="380" alt="">
                 <h3 class="product-card-title product-card-follow-me">Селфи-палка «Следуй за мной»</h3>
-                <p class="product-card-price">1500 ₽</p>
+                <p class="product-card-price">1 500 ₽</p>
                 <span class="product-mask"> </span>
                 <div class="learn-more-button"><span class="learn-more">Подробнее</span></div>
               </a>
@@ -376,7 +372,7 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="modal-container modal-hidden">
+    <div class="modal-container">
       <div class="rare-goods-modal">
           <form class="rare-order-form" action="https://echo.htmlacademy.ru/" method="post">
             <h2 class="goods-modal-title">Доставка под заказ</h2>
@@ -384,12 +380,12 @@
             <span class="visually-hidden">Закрыть</span>
             </button>
             <div class="field-group rare-order-form-name">
-              <label class="rare-form-label" for="rare-order-name">Ваше имя:</label>
+              <label class="rare-form-label name-label" for="rare-order-name">Ваше имя:</label>
               <input class="order-field" type="text" id="rare-order-name" name="rare-order-name" placeholder="Введите имя" required>
               <span class="rare-order-help help-name">Добавьте имя</span>
             </div>
             <div class="field-group rare-order-form-mail">
-              <label class="rare-form-label" for="rare-order-mail">Ваш e-mail:</label>
+              <label class="rare-form-label mail-label" for="rare-order-mail">Ваш e-mail:</label>
               <input class="order-field" type="email" id="rare-order-mail" name="rare-order-mail" placeholder="Введите e-mail" required>
               <span class="rare-order-help help-mail">Забавный у вас адрес</span>
             </div>
@@ -399,9 +395,8 @@
             </div>
             <div class="order-quanity-container">
               <div class="order-quanity-info">
-                <label class="rare-form-label" for="quanity-number">Количество</label>
+                <label class="rare-form-label" for="quanity-number">Количество:</label>
                 <p tabindex="0" class="quanity-info-wrapper">
-                  <img class="quanity-info-icon" src="images/icons/icon-info.svg" width="2" height="12" alt="">
                   <span class="order-tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
                     к провозу багажа.</span>
                 </p>

@@ -995,9 +995,9 @@ img {
   min-height: 40px;
   margin-bottom: 48px;
   padding-top: 10px;
-  padding-right: 5px;
+  padding-right: 15px;
   padding-bottom: 10px;
-  padding-left: 8px;
+  padding-left: 18px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -1291,6 +1291,7 @@ img {
   width: 287px;
   min-height: 319px;
   margin: 0;
+  margin-bottom: 50px;
   padding-top: 64px;
   padding-left: 0;
 
@@ -1362,6 +1363,21 @@ img {
 
 /* :hover, :active, :focus*/
 /* Current-link */
+.advantages-link:focus {
+  outline: none;
+}
+
+.advantages-link:focus-visible {
+  outline: none;
+}
+
+.advantages-item:focus {
+  outline: none;
+}
+
+.advantages-item:focus-visible {
+  outline: none;
+}
 
 .advantages-item-current .advantages-link:hover .advantages-link-definition {
   color: rgba(255, 225, 127, 0.5);
@@ -1385,8 +1401,7 @@ img {
 }
 
 .advantages-item-current .advantages-link:focus-visible {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
+  outline: none;
 }
 
 .advantages-item-current .advantages-link:focus-visible .advantages-link-definition {
@@ -1418,6 +1433,7 @@ img {
   width: 475px;
   margin: 0;
   margin-right: 83px;
+  padding-bottom: 50px;
 }
 
 .advantage-feature-title {
@@ -1470,18 +1486,31 @@ img {
 }
 
 .rare-goods-icon {
-  display: block;
-  padding: 35px 39px 34px;
+  display: inline-block;
+  align-self: stretch;
+  box-sizing: border-box;
+  width: 125px;
+  height: inherit;
+  min-height: 100px;
+  margin: 0;
+  padding: 39px;
 
+  background: no-repeat center url("../images/goods-delivery-car.svg");
   background-color: #ffe17f;
 }
 
 .rare-goods-link p {
+  display: inline-block;
+  max-width: 850px;
   margin: 0;
-  margin-top: 5px;
-  margin-right: 10px;
-  margin-left: 13px;
+  margin-right: 20px;
+  margin-left: 22px;
   padding: 0;
+  padding-top: 30px;
+  padding-bottom: 25px;
+
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .rare-goods-info-wrapper {
@@ -1507,7 +1536,7 @@ img {
 }
 
 .rare-goods-link:hover .rare-goods-icon {
-  background: #ffc700;
+  background-color: #ffc700;
 }
 
 .rare-goods-link:active .rare-goods-info-icon {
@@ -1515,7 +1544,7 @@ img {
 }
 
 .rare-goods-link:active .rare-goods-icon {
-  background: #ffc700;
+  background-color: #ffc700;
 }
 
 .rare-goods-link:active {
@@ -1900,11 +1929,11 @@ img {
 }
 
 .quanity-info-wrapper:hover .order-tooltip {
-  z-index: 1;
+  z-index: 2;
 }
 
 .quanity-info-wrapper:focus .order-tooltip {
-  z-index: 1;
+  z-index: 2;
 }
 
 .quanity-info-wrapper:focus-visible {
@@ -1932,6 +1961,9 @@ img {
   border: none;
 }
 
+.quanity-minus {
+  z-index: 1;
+}
 /* :hover, :active, :focus*/
 
 .quanity-control:hover {
@@ -2258,7 +2290,7 @@ img {
 .newsletter-description {
   display: block;
   width: 552px;
-  min-height: 90px;
+  min-height: 183px;
   margin: 73px 0 0 252px;
 
   text-align: left;
@@ -2271,9 +2303,9 @@ img {
   justify-content: flex-start;
   align-items: center;
   min-height: 57px;
-  margin-top: 143px;
+  margin-top: 50px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .newsletter-field {
@@ -2372,7 +2404,7 @@ img {
   display: inline-block;
   max-width: 200px;
   margin: 0;
-  margin-top: 157px;
+  margin-top: 64px;
   margin-right: 1px;
 }
 
@@ -3569,4 +3601,18 @@ img {
 .catalog-pagination-button:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
+}
+
+.current-page-link:focus {
+  outline: none;
+  cursor: default;
+}
+
+.current-page-link:hover {
+  cursor: default;
+}
+
+.current-page-link:focus-visible {
+  outline: none;
+  cursor: default;
 }
